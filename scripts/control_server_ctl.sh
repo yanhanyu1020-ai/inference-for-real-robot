@@ -1,0 +1,1 @@
+../inference/scripts/control_server_ctl.sh

@@ -1,0 +1,13 @@
+{
+  "kind": "p450",
+  "port": 8702,
+  "namespace": "/uav1",
+  "image_topic": "/uav1/camera/color/image_raw/compressed",
+  "velocity_scale": 0.3,
+  "max_action_age_s": 0.75,
+  "altitude_bounds_m": [
+    0.3,
+    2.0
+  ],
+  "radius_m": 1.0
+}

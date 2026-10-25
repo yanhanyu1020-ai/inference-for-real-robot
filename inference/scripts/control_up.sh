@@ -1,0 +1,1 @@
+../onboard/scripts/control_up.sh

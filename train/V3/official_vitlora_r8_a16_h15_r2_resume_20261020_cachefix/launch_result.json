@@ -1,0 +1,70 @@
+{
+  "queue": {
+    "status": "running",
+    "run_name": "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2",
+    "attempt_utc": "2026-10-20T04:44:03.141380+00:00",
+    "gpu": {
+      "uuid": "GPU-3f45f18c-9af9-fb00-ce91-eaac6d6ec2c0",
+      "total_mib": 81920,
+      "free_mib": 81146,
+      "has_compute_process": false
+    },
+    "uid": 1037,
+    "proof": {
+      "manifest_sha256": "56646a366abf302d7f898585ed60e7b3e714a9b946b36f4f513e285c17689054",
+      "preflight_sha256": "adf806e74e25b73f5f2c43fa5f935ff1cd04efe1c53bd03a3d86c25fc10280e6"
+    },
+    "no_automatic_retry": true,
+    "started_utc": "2026-10-20T04:44:03.918700+00:00",
+    "supervisor_identity": {
+      "pid": 640294,
+      "uid": 1037,
+      "start_ticks": "580756",
+      "command": [
+        "/meta_eon_cfs/home/hph/heterovla/.venvs/openpi-pi05/bin/python",
+        "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2_resume_20261020_cachefix/queue_training.py",
+        "_supervise",
+        "--code-dir",
+        "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2_resume_20261020_cachefix",
+        "--queue-dir",
+        "/meta_eon_cfs/home/hph/heterovla-model/V3/queues/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2__resume_20261020_cachefix",
+        "--run-dir",
+        "/meta_eon_cfs/home/hph/heterovla-model/V3/runs/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2",
+        "--run-name",
+        "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2",
+        "--python",
+        "/meta_eon_cfs/home/hph/heterovla/.venvs/openpi-pi05/bin/python",
+        "--nvidia-smi",
+        "nvidia-smi",
+        "--lock-fd",
+        "4",
+        "--ack-fd",
+        "6"
+      ]
+    },
+    "training_identity": {
+      "pid": 640322,
+      "uid": 1037,
+      "start_ticks": "580831",
+      "command": [
+        "/meta_eon_cfs/home/hph/heterovla/.venvs/openpi-pi05/bin/python",
+        "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2_resume_20261020_cachefix/run_training.py",
+        "--gpu",
+        "GPU-3f45f18c-9af9-fb00-ce91-eaac6d6ec2c0",
+        "--run-name",
+        "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2"
+      ]
+    },
+    "command": [
+      "/meta_eon_cfs/home/hph/heterovla/.venvs/openpi-pi05/bin/python",
+      "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2_resume_20261020_cachefix/run_training.py",
+      "--gpu",
+      "GPU-3f45f18c-9af9-fb00-ce91-eaac6d6ec2c0",
+      "--run-name",
+      "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2"
+    ],
+    "log": "/meta_eon_cfs/home/hph/heterovla-model/V3/queues/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2__resume_20261020_cachefix/training.log",
+    "runtime_status_path": "/meta_eon_cfs/home/hph/heterovla-model/V3/runs/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2/runtime_status.json"
+  },
+  "checked_utc": "2026-10-20T04:44:03.968831+00:00"
+}

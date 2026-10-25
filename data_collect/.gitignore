@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+build/
+run/
+
+# Local controller state and generated test/runtime artifacts
+.pytest_cache/
+.venv*/
+macos_paths.json
+local.*.json
+episodes/
+*.log

@@ -1,0 +1,1 @@
+../data_collect/scripts/sport_to_go2_replay.py

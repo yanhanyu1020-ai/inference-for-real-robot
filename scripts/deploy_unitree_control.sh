@@ -1,0 +1,1 @@
+../inference/scripts/deploy_unitree_control.sh

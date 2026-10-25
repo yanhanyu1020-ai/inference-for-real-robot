@@ -1,0 +1,207 @@
+{
+  "passed": true,
+  "manifest_sha256": "d2d3be0864e239f6c0b060e95e1ac5dfdb0bf9dfcdae65ba43e79a37a47821c4",
+  "official_train_sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+  "official_commit": "15a9616a00943ada6c20a0f158e3adb39df2ccac",
+  "groups": {
+    "vit_dense": {
+      "parameters": 414803696,
+      "trainable": 0,
+      "dtypes": [
+        "bfloat16"
+      ]
+    },
+    "vit_lora": {
+      "parameters": 4347648,
+      "trainable": 4347648,
+      "dtypes": [
+        "float32"
+      ]
+    },
+    "other_dense": {
+      "parameters": 2938630176,
+      "trainable": 2938630176,
+      "dtypes": [
+        "float32"
+      ]
+    }
+  },
+  "datasets": {
+    "train": {
+      "windows": 34013,
+      "sources": 55,
+      "allow_imputed": false,
+      "fps": 15,
+      "raw_action_shape": [
+        15,
+        14
+      ],
+      "transformed_action_shape": [
+        15,
+        32
+      ],
+      "prompt": "Move to the table and pick up the green block inside the cardboard box."
+    },
+    "val": {
+      "windows": 743,
+      "sources": 7,
+      "allow_imputed": false,
+      "fps": 15,
+      "raw_action_shape": [
+        15,
+        14
+      ],
+      "transformed_action_shape": [
+        15,
+        32
+      ],
+      "prompt": "Move to the table and pick up the green block inside the cardboard box."
+    }
+  },
+  "learning_rates": {
+    "0": 1.9959770725108683e-08,
+    "499": 9.980039976653643e-06,
+    "500": 9.999999747378752e-06,
+    "19999": 9.999999974752427e-07,
+    "20000": 9.999999974752427e-07
+  },
+  "batch_size": 32,
+  "warmup_steps": 500,
+  "decay_steps": 20000,
+  "ema_decay": 0.99,
+  "vit_rank": 8,
+  "vit_alpha": 16,
+  "base_dense_shapes_exact": true,
+  "train_state_bytes": 48746859980,
+  "gpu_used": false,
+  "base_arrays_loaded": false,
+  "gpu_memory_verified": false,
+  "cpu_tests": {
+    "vit_lora": true,
+    "official_contract": true,
+    "official_trainstate_compilation": true,
+    "finite_runtime_reporting": true,
+    "one_shot_queue": true,
+    "manual_fresh_launcher": true,
+    "global_cache_before_import": true
+  },
+  "official_trainstate_lower_compile_checked": true,
+  "actual_batch_matches_model_spec": true,
+  "actual_batch_leaves": [
+    {
+      "shape": [
+        32,
+        224,
+        224,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32,
+        224,
+        224,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32,
+        224,
+        224,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32,
+        200
+      ],
+      "dtype": "int32"
+    },
+    {
+      "shape": [
+        32,
+        200
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32,
+        15,
+        32
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "strict_data_cpu_scan": {
+    "status_sha256": "9d560907a5e72509b4fc9823cd36e7edc780a35b24583cad65b2ac434541ea11",
+    "source_validity_report_sha256": "198c7b2fe9c841966c9331a1f052635738e17e9b635b696264b56dffebcdbf49",
+    "all_62_sources_original_values_and_masks_verified": true,
+    "episode_manifest_sha256": "1ec367eeea0f16f53bbe9581550fd3832fd70375f983cfad269f1c019635c30f",
+    "splits": {
+      "train": {
+        "sources": 55,
+        "episodes": 856,
+        "frames": 45997,
+        "windows": 34013,
+        "parquet_files_scanned": 856,
+        "all_numeric_rows_finite_and_valid": true,
+        "imputed_columns_present": [],
+        "all_imputation_masks_zero": true,
+        "episode_times_continuous_15hz": true
+      },
+      "val": {
+        "sources": 7,
+        "episodes": 251,
+        "frames": 4257,
+        "windows": 743,
+        "parquet_files_scanned": 251,
+        "all_numeric_rows_finite_and_valid": true,
+        "imputed_columns_present": [],
+        "all_imputation_masks_zero": true,
+        "episode_times_continuous_15hz": true
+      }
+    },
+    "videos_fully_decoded": false
+  },
+  "normalization": {
+    "sha256": "4d2329417c7ddcd93d75776f04373e21d823574b28af527f00c3afb5d037d33c",
+    "old_norm_rejected": true,
+    "use_quantile_norm": true,
+    "actual_loaded_fields_exactly_match_new_asset": true,
+    "state_width": 30,
+    "action_width": 14
+  },
+  "global_cache_cpu_result_sha256": "bcdb333bfac365bf5f67c2a0031e2aa862490323e56f4444faf782e3984cbe7b",
+  "ema_frozen_dense_policy": "copy_raw_frozen_parameters_exactly"
+}

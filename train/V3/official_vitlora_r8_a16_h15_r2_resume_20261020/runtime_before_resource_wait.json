@@ -1,0 +1,12 @@
+{
+  "status": "training",
+  "pid": 1234571,
+  "gpu": "GPU-0b2922ed-4340-e5b9-3cb4-3f0eb92380de",
+  "run_name": "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2",
+  "step": 12001,
+  "manifest_sha256": "02abc63c0cb72eb8304fcb23a79d22d2069db703b7e95beec662775edcf26591",
+  "preflight_sha256": "3a79a78425631f0852929c606a4499de691f3373581954c08a7e26ac1e3f1aff",
+  "updated_utc": "2026-10-20T02:49:17.437801+00:00",
+  "elapsed_seconds": 52751.962303647015,
+  "last_checkpoint_loop_step": 12000
+}

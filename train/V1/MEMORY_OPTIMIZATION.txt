@@ -1,0 +1,45 @@
+2026-10-05: pi0.5 dual-LoRA memory/throughput experiment
+
+OpenPI source: Physical-Intelligence/openpi at
+15a9616a00943ada6c20a0f158e3adb39df2ccac.
+The local patch adds a JAX remat_policy option to Pi0Config, passes it
+to Gemma, and preserves the upstream nothing_saveable default.
+No changes to data, augmentation, action dimensions, frozen parameters,
+learning rate, parameter names, or checkpoint formats were made.
+
+Recommended measured profile: dual_lora, batch_size=16,
+remat_policy=dots_with_no_batch_dims_saveable, on one A800 80GB.
+The launcher accepts --remat-policy. Printing a config does not train;
+formal training still requires --execute, --gpu and a unique --exp-name.
+The default has not been changed for other, unmeasured configurations.
+
+Results, with identical inputs, seed and base weights:
+Policy                             Pipeline samples/s   Process peak GiB
+nothing_saveable                    12.3364              16.6035
+dots_saveable                       14.6077              71.7871
+dots_with_no_batch_dims_saveable    14.9207              71.7871
+none                               skipped: estimated live memory 111.64 GiB
+
+Selective saving increased measured throughput by 20.95%. Its compiled
+live-memory estimate is 49.06 GiB, versus 12.03 GiB for the baseline.
+NVML process peaks include the retained JAX allocator pool and context;
+they are not all live tensors. Each successful case has 5 warmup, 15
+compute-only and 8 pipeline steps. Compilation/load time is excluded.
+Only two real training batches are reused for compute timing; the
+pipeline portion reads fresh batches. There are no training checkpoints.
+
+Numerical checks for the recommended policy: cached input SHA256 and
+initial parameter samples match. First loss matches exactly. Maximum
+loss difference across 28 steps is 0.0008508. Across 6944 parameter
+samples after five updates, the maximum update difference is 7.17e-7;
+relative L2 difference in those updates is 1.62%. This is not bitwise
+equivalence or a full-gradient comparison. All reported metrics are
+finite. This benchmark does not establish convergence or validation
+performance. Tiny timing differences between saving policies should
+not be interpreted as a robust ranking across all hardware/workloads.
+
+Reports: reports/lora_remat_20261005/comparison.json
+Patch: openpi_memory_patch.patch
+W&B: https://wandb.ai/huph7-sun-yat-sen-university/heterovla-pi05/runs/0u6zubwb
+GPU5 was released after the tests. Full tuning and concurrent runs were
+not benchmarked here. Raw benchmark data remain untouched.

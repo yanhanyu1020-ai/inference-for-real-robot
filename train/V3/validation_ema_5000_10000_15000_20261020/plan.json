@@ -1,0 +1,37 @@
+{
+  "gpu_index": 5,
+  "gpu_uuid": "GPU-e66640c0-8e1e-3f09-8f3f-2d10f877ec04",
+  "steps": [
+    5000,
+    10000,
+    15000
+  ],
+  "checkpoint_root": "/meta_eon_cfs/home/hph/heterovla-model/V3/checkpoints/pi05_heterovla_v3_vitlora/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2",
+  "output_root": "/meta_eon_cfs/home/hph/heterovla-model/V3/validation/official_ema_5000_10000_15000_20261020",
+  "code_dir": "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2",
+  "eval_dir": "/meta_eon_cfs/home/hph/heterovla/train/V3/validation_ema_5000_10000_15000_20261020",
+  "python": "/meta_eon_cfs/home/hph/heterovla/.venvs/openpi-pi05/bin/python",
+  "cache_dir": "/meta_eon_cfs/home/hph/heterovla-model/V3/validation/official_ema_5000_10000_15000_20261020/cache",
+  "cache_summary_path": "/meta_eon_cfs/home/hph/heterovla-model/V3/validation/official_ema_5000_10000_15000_20261020/cache/manifest.json",
+  "training_status_path": "/meta_eon_cfs/home/hph/heterovla-model/V3/runs/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2/runtime_status.json",
+  "minimum_free_mib": 28672,
+  "allocator_fraction": 0.3,
+  "weights": "EMA",
+  "batch_size": 16,
+  "seed": 42,
+  "expected_windows": 2426,
+  "fps": 15,
+  "action_horizon": 15,
+  "notify_policy": "only completed results or actual errors",
+  "cancelled_previous_scope": "Only GPU5 and steps5000,10000,15000; no GPU4 and no6000/8000/12000 validation",
+  "changes_training": false,
+  "eval_sources_sha256": {
+    "test_queue_contract.py": "b17e823cfc0fada122d5058ba4bdcf013312266d3653cdc44a56c073cafe8028",
+    "build_cache.py": "83aeea8eec2769113671676b53faff72744a3cfca3de65336cd413d3efb596a1",
+    "evaluate_checkpoint.py": "60df860248577d05bd7a711d9d0add9e4cf6846ad450c6dd7498e446defe38e2",
+    "queue_eval.py": "06d1b22f61562ca68c7a3c136aa9aa870c19664d4fa9efce96ca4e1715d899e4"
+  },
+  "mode": "prepared_only",
+  "execute_requires_explicit_flag": true,
+  "automatic_start_authorized": false
+}

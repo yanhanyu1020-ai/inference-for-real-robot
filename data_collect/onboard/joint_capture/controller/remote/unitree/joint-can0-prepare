@@ -1,0 +1,12 @@
+#!/bin/sh
+# Fixed interface and bitrate; never accepts user-supplied commands or arguments.
+set -eu
+[ "$#" -eq 0 ] || exit 2
+if /usr/sbin/ip -brief link show can0 | /bin/grep -Eq 'can0[[:space:]]+UP[[:space:]]'; then
+    /usr/sbin/ip -details link show can0 | /bin/grep -Eq 'bitrate 1000000([[:space:]]|$)' || {
+        echo 'can0 is already UP with unexpected bitrate; refusing to reconfigure' >&2
+        exit 1
+    }
+    exit 0
+fi
+exec /usr/sbin/ip link set can0 up type can bitrate 1000000

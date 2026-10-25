@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>联合采集控制台 · P450 / Unitree</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script><script src="/preview.js" defer></script></head>
+<body><div class="shell">
+<header class="masthead"><div class="brand"><span class="brand-mark" aria-hidden="true">◎</span><div><small>P450 / UNITREE</small><h1>联合采集控制台</h1></div></div><div class="connection"><span id="browser-light" class="light neutral"></span><span id="browser-state">正在连接本机服务</span><span id="sample-time" class="mono muted">—</span></div></header>
+<main>
+<section class="hero panel" aria-labelledby="session-title">
+<div class="hero-top"><div><p class="eyebrow">采集任务</p><h2 id="session-title">等待设备状态</h2><p id="session-subtitle" class="muted">正在检查设备连接…</p></div><div class="session-live"><span id="session-pill" class="pill neutral">状态未知</span><span class="field-label">共同采集时长</span><div id="elapsed" class="elapsed mono">--:--:--</div></div></div>
+<form id="capture-form" class="control-form"><div class="form-grid"><label>备注<input id="instruction" name="instruction" maxlength="1000" autocomplete="off" placeholder="选填"></label></div><div class="main-actions">
+<div><button id="prepare" type="button" class="button outline">初始化设备</button></div>
+<div><button id="start" type="submit" class="button primary">开始采集</button></div>
+<div><button id="stop" type="button" class="button dark">停止并保存</button><span class="action-description">不停止机器人运动</span></div>
+</div></form>
+<p id="start-hint" class="fineprint" role="status">正在检查设备…</p><p id="action-feedback" class="action-feedback" role="status" aria-live="polite"></p><div id="remaining" class="timer-note">P450 单次采集上限 30 分钟，请提前停止。</div>
+<details class="session-details"><summary>本条任务与起止时间</summary><div class="session-meta"><div><span class="field-label">任务 ID</span><span id="episode-id" class="mono">尚无</span></div><div><span class="field-label">任务名称</span><span id="episode-label">尚无</span></div><div><span class="field-label">会话阶段</span><span id="episode-phase">尚无</span></div></div><div class="session-range"><div><span class="field-label">共同开始 · 本机时间</span><strong id="interval-start">尚未共同开始</strong></div><div><span class="field-label">共同结束 · 本机时间</span><strong id="interval-end">尚无</strong></div></div></details>
+</section>
+<section class="panel clock-strip" aria-label="对时状态"><div class="clock-summary"><h2>对时</h2><span id="clock-badge" class="pill neutral">未知</span><span title="软件时钟模型估计，不代表相机同时曝光">模型误差 <strong id="clock-error">未知</strong></span><span>样本年龄 <strong id="clock-time">未知</strong></span></div><div id="clock-reasons" class="note"></div></section>
+<section class="overview" aria-label="设备状态">
+<article id="p450-card" class="host-card panel"><div class="host-heading"><div><p class="eyebrow">01 / 无人机</p><h2>P450</h2></div><span id="p450-badge" class="pill neutral">未知</span></div><div id="p450-content"></div></article>
+<article id="unitree-card" class="host-card panel"><div class="host-heading"><div><p class="eyebrow">02 / 机器狗与机械臂</p><h2>Unitree</h2></div><span id="unitree-badge" class="pill neutral">未知</span></div><div id="unitree-content"></div></article>
+</section>
+<section class="panel preview-panel" aria-labelledby="preview-title">
+<div class="section-head"><div><p class="eyebrow">无人机 · 彩色相机</p><h2 id="preview-title">实时画面</h2></div><div class="preview-controls"><span id="preview-state" class="pill neutral" role="status">未开启</span><button id="preview-toggle" type="button" class="button outline" disabled>开启预览</button></div></div>
+<div class="preview-stage"><img id="preview-image" alt="无人机彩色相机实时画面" hidden><p id="preview-placeholder">开启预览后显示无人机镜头</p></div>
+<p class="fineprint">预览独立于采集，默认每秒 5 帧。相机需先初始化；关闭预览只停止画面显示。</p>
+</section>
+<section class="lower">
+<article class="panel detail-panel"><div class="section-head"><h2>采集后校验</h2><span id="validation-badge" class="pill neutral">未验收</span></div><div class="control-row"><button id="finalize" type="button" class="button outline">校验待处理数据</button></div><p id="postprocess-hint" class="fineprint" role="status">暂无待校验数据。</p><details><summary>最近一条的校验结果</summary><div id="validation-body" class="validation-body">尚无验收报告。</div><div class="path-line report-path"><span class="field-label">本机报告路径</span><div class="path-value"><code id="report-path">尚未取得</code><button type="button" class="copy" data-copy="report-path" disabled>复制</button></div></div></details></article>
+<article class="panel log-panel"><div class="section-head"><h2>最近操作</h2><span id="job-badge" class="pill neutral">无任务</span></div><div id="job-summary" class="job-summary">尚无操作任务。</div><details><summary>查看操作日志</summary><pre id="job-log">尚无日志</pre></details><details class="maintenance"><summary>故障处理</summary><div class="control-row"><button id="recover" type="button" class="button outline">核对遗留会话</button><button id="align" type="button" class="button outline">重新校验本条</button></div><p class="fineprint">核对遗留会话：异常退出后找回采集记录，再执行停止。重新校验本条：重建最近一条的对时与数据报告。</p></details></article>
+</section></main>
+<footer><details><summary>使用说明</summary><p>首次使用或设备重连后初始化，按 Home 确认遥操。任务按本机时间自动命名。停止并保存仅停止录制，不停止机器人运动。关闭页面不会停止采集。查询耗时包含 SSH 与命令执行，不等于同步误差。</p></details></footer>
+</div></body></html>

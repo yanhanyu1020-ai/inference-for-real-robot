@@ -1,0 +1,1 @@
+../inference/scripts/robotctl.sh

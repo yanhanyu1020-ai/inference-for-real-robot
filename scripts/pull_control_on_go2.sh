@@ -1,0 +1,1 @@
+../inference/scripts/pull_control_on_go2.sh

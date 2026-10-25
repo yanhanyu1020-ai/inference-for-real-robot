@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-20T03:50:13.049501+00:00",
+  "backend": "cpu",
+  "official_train_sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+  "test_sha256": "72695dd4af3e5b7005d88d340252cd1e11890c7bdd146b4dd39ed303e774f720",
+  "state_class": "openpi.training.utils.TrainState",
+  "official_train_step_save_restore_used": true,
+  "checkpoint_directory_step": 12000,
+  "restored_actual_optimizer_step": 12001,
+  "first_resumed_update_actual_step": 12002,
+  "raw_ema_adam_step_bitwise_equal_after_restore": true,
+  "resumed_next_update_bitwise_equal_to_uninterrupted": true,
+  "nonzero_lora_b_preserved": true,
+  "adam_counts_before_and_after": [
+    [
+      12001,
+      12001
+    ],
+    [
+      12002,
+      12002
+    ]
+  ],
+  "lr_at_restored_count": 4.247324795869645e-06,
+  "seed_split_and_fold_in_rng_identical": true,
+  "frozen_raw_and_ema_exactly_unchanged": true,
+  "gpu_used": false,
+  "base_arrays_loaded": false,
+  "videos_decoded": false
+}

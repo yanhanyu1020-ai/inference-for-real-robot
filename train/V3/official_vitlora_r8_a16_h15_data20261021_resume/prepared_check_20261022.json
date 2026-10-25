@@ -1,0 +1,20 @@
+{
+  "status": "prepared_only",
+  "run_name": "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_data20261021",
+  "resume_id": "manual_20261022_085356_2b5cc349",
+  "code_dir": "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_data20261021_manual_20261022_085356_2b5cc349",
+  "queue_dir": "/meta_eon_cfs/home/hph/heterovla-model/V3/queues/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_data20261021__manual_20261022_085356_2b5cc349",
+  "run_dir": "/meta_eon_cfs/home/hph/heterovla-model/V3/runs/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_data20261021",
+  "source_checkpoint": "/meta_eon_cfs/home/hph/heterovla-model/V3/checkpoints/pi05_heterovla_v3_vitlora/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_data20261021/16000",
+  "source_loop_step": 16000,
+  "source_actual_step": 16001,
+  "uid": 1037,
+  "boot_id": "8f4a8b7f-f27c-40e4-afdf-2d4f0f7dd9fc",
+  "proof": {
+    "manifest_sha256": "4460c5f88a0fbd87040b0d157708af8eb40f3bc1329b0d283dcb64a7351d7911",
+    "preflight_sha256": "a356d2992d1ddf130f8269b60267ebeba08bf53ac0f4404fdf59b370d525e685"
+  },
+  "log": "/meta_eon_cfs/home/hph/heterovla-model/V3/queues/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_data20261021__manual_20261022_085356_2b5cc349/training.log",
+  "no_automatic_retry": true,
+  "model_started": false
+}

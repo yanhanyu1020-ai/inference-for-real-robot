@@ -1,0 +1,1 @@
+../data_collect/scripts/deploy_to_unitree.sh

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "manifest_sha256": "bdf993b8fb54b2488a3a9e8c4edf69ad83fc91b6845f18a0400e3eeef9613800",
+  "original_contract": {
+    "manifest_sha256": "02abc63c0cb72eb8304fcb23a79d22d2069db703b7e95beec662775edcf26591",
+    "preflight_sha256": "3a79a78425631f0852929c606a4499de691f3373581954c08a7e26ac1e3f1aff"
+  },
+  "source_loop_step": 12000,
+  "source_actual_step": 12001,
+  "checkpoint_scalars": {
+    "step": 12001,
+    "opt_state.1.0.count": 12001,
+    "opt_state.1.2.count": 12001
+  },
+  "cpu_resume_roundtrip_passed": true,
+  "global_cache_cpu_regression_passed": true,
+  "cpu_evidence_policy": "Reused hash-bound tiny official roundtrip and global-cache CPU regression; no GPU test",
+  "gpu_used": false,
+  "gpu_memory_verified": false,
+  "large_checkpoint_arrays_loaded": false,
+  "target_updates": 20000,
+  "manual_entry_sha256": "a6f7e743fd5d7cccef88a3f23d9c92a4e594c70eb9b08ad3eda10d5eb073c2e1"
+}

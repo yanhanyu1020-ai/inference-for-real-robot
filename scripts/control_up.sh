@@ -1,0 +1,1 @@
+../inference/scripts/control_up.sh

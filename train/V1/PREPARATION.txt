@@ -1,0 +1,62 @@
+HeteroVLA pi0.5 preparation (no training started)
+
+Host checked: 16.9 (meta-eon-a800-006). Project, data and weights are on shared CFS.
+OpenPI commit: 15a9616a00943ada6c20a0f158e3adb39df2ccac.
+Source: /meta_eon_cfs/home/hph/heterovla/third_party/openpi
+Environment: /meta_eon_cfs/home/hph/heterovla/.venvs/openpi-pi05
+Source root: /meta_eon_cfs/home/hph/heterovla/train/V1
+Run outputs: /meta_eon_cfs/home/hph/heterovla-model/V1/runs/pi05_v1
+Data: /meta_eon_cfs/home/hph/heterovla-data/aligned/V1
+Weights: /meta_eon_cfs/home/hph/heterovla-model/pretrained/pi05_base/params
+
+Environment setup:
+  Source env.sh in the experiment root before using its scripts.
+  Installed with the existing Python 3.11 and official uv.lock (uv sync --frozen).
+  Dependency versions are recorded in reports/environment_freeze.txt.
+  Downloads used the user-provided HTTP proxy. W&B API direct access was verified;
+  the proxy returned a TLS error for W&B, so env.sh bypasses the proxy for .wandb.ai.
+  Credentials are in the user's ~/.netrc with mode 0600, never in this directory.
+
+W&B:
+  https://wandb.ai/huph7-sun-yat-sen-university/heterovla-pi05
+  One preparation-only online test logs scalar checks and zero training steps.
+  No dataset/media/model artifacts are uploaded by the preparation test.
+  See reports/wandb_check.json for the actual run URL.
+
+Prepared comparisons (all train input/output projections and timestep MLPs):
+  action_lora: freeze vision/language; LoRA action expert.
+  dual_lora: freeze vision; LoRA language and action expert.
+  expert_full: freeze vision; LoRA language; full action expert.
+  full: train all model parameters.
+  Official LoRA ranks: language 16, action expert 32.
+  All use seed 42, H=10, internal dimension 32, real action dimension 14.
+  EMA disabled in all four so it is not an additional comparison variable.
+  Batch 8, peak LR 2.5e-5 and 2000 steps are provisional preparation defaults.
+  This does not mean they are optimal or that full finetuning fits one GPU.
+
+Data split:
+  Train tasks 01/02/04/05: 2981 frames, 2945 complete H=10 windows.
+  Validation task 06: 719 frames, 710 complete H=10 windows.
+  Task 03 remains quarantined. benchmark and V1 data are not rewritten.
+  All normalization comes from the existing training split.
+  Go2/UAV targets are reconstructed motion, not original control commands.
+
+Configuration-only command (does NOT train):
+  source /meta_eon_cfs/home/hph/heterovla/train/V1/env.sh
+  python "$HETEROVLA_ROOT/train/V1/scripts/launch_experiment.py" --variant dual_lora
+
+CPU preparation checks (does NOT train):
+  python "$HETEROVLA_ROOT/train/V1/scripts/preflight.py"
+
+Before later training:
+  Use platform-allocated GPUs, respecting the two-job rule and job naming rules.
+  Each independent experiment must see only its assigned GPU.
+  Actual GPU allocation, forward/backward, throughput and max-batch checks remain.
+  Official trainer has no gradient accumulation added here. Use a common feasible
+  batch or implement/validate accumulation before comparing different microbatches.
+  Automatic validation/14D action-metric evaluation is not yet wired into trainer.
+  The official trainer logs loss/grad_norm/param_norm; it also logs first-batch
+  camera images to W&B when actually run. The preparation check does not do so.
+  launch_experiment.py prints config by default. --execute plus --gpu and a unique
+  --exp-name explicitly enters the official trainer; none were executed here.
+  No platform job, multi-experiment scheduler or robot command was started.

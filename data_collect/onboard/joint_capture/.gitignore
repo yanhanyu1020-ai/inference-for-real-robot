@@ -1,0 +1,37 @@
+# Generated state and acquisition data are never part of this repository.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.test_tmp/
+episodes/
+joint_manifests/
+heterovla-data/
+.console/
+*.partial
+*.log
+.env
+.env.*
+!.env.example
+.ssh/
+id_rsa*
+id_ed25519*
+*.pem
+*.key
+control-token
+ssh_config
+python_path.txt
+manifest_root.txt
+.venv-macos/
+macos_paths.json
+local.macos.json
+
+# Never publish nested Git histories or transient build directories.
+**/.git/
+**/build/
+**/devel/
+**/.vscode/
+**/.idea/
+
+# SDK2 copy was interrupted; preserve it privately, not as a complete vendor tree.
+/robots/unitree/home/unitree/unitree_sdk2-main/

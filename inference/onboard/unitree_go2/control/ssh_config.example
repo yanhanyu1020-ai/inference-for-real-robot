@@ -1,0 +1,21 @@
+# Copy this file outside Git, replace the placeholders, and pass its path as
+# GO2_SSH_CONFIG when deploying.  Never commit real device addresses or keys.
+Host heterovla-jump
+    HostName <JUMP_PUBLIC_HOST>
+    User <SSH_USER>
+    Port 22
+    IdentityFile ~/.ssh/heterovla_tunnel_ed25519
+    IdentitiesOnly yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+
+Host heterovla-a800
+    HostName <GPU_SERVER_PRIVATE_HOST>
+    User <SSH_USER>
+    Port 22
+    IdentityFile ~/.ssh/heterovla_tunnel_ed25519
+    IdentitiesOnly yes
+    ProxyJump heterovla-jump
+    ExitOnForwardFailure yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3

@@ -1,0 +1,17 @@
+[Unit]
+Description=Prepare fixed can0 interface for joint collection (no motor commands)
+After=sys-subsystem-net-devices-can0.device
+Requires=sys-subsystem-net-devices-can0.device
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/joint-can0-prepare
+TimeoutStartSec=15
+NoNewPrivileges=yes
+ProtectHome=yes
+ProtectSystem=strict
+PrivateTmp=yes
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target

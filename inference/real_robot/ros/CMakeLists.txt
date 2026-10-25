@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.10)
+project(heterovla_p450_observation LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
+find_package(catkin REQUIRED COMPONENTS roscpp mavros prometheus_msgs tf2_geometry_msgs)
+find_package(Eigen3 REQUIRED)
+set(P450_WORKSPACE "/home/amov/p450_experiment" CACHE PATH "Existing P450 workspace")
+set(MODULES "${P450_WORKSPACE}/src/Prometheus/Modules")
+add_executable(p450_estimator p450_estimator.cpp)
+target_include_directories(p450_estimator PRIVATE ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS}
+    "${MODULES}/uav_control/include" "${MODULES}/common/include")
+target_link_libraries(p450_estimator PRIVATE "${P450_WORKSPACE}/devel/lib/libuav_estimator.so" ${catkin_LIBRARIES})
+set_target_properties(p450_estimator PROPERTIES BUILD_RPATH "${P450_WORKSPACE}/devel/lib")

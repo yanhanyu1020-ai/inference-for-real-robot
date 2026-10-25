@@ -1,0 +1,9 @@
+{
+  "README.md": "6607eab06a4dd6505580b6c68069f5f51632c48f11d20a48f600f9af43be5d5d",
+  "handoff_lora_v3.py": "f8ea9db2bd50f680b1f05e5bcab1010d1e7ffaa0443960171ee0a41e63465223",
+  "scripts/dataset_v3.py": "2adc6c25c616d2271e08ec0821ef3e8e390a5a8b9971fbf0dfc7477065d07984",
+  "scripts/lora_state_v3.py": "bafa3c647fa9a2019fa9278df859b23e94c4a35b04f81ea90743130caeb66c58",
+  "scripts/test_v3_contract.py": "91e2d4500927b126f7a34d47e0fc3465313126713107508805a4ae321164a9a1",
+  "scripts/train_lora_v3.py": "ae1ddb50b79d25efe585fd7ebf285bd573198fd96a17e2f158d13b1f5ed496e3",
+  "scripts/v3_config.py": "8cce1dea7f7eb4e0565765e3b7d86747ee865e2b9918c83d94170c3eb689f7e0"
+}

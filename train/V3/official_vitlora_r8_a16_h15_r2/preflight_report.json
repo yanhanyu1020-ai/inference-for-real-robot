@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "manifest_sha256": "02abc63c0cb72eb8304fcb23a79d22d2069db703b7e95beec662775edcf26591",
+  "official_train_sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+  "official_commit": "15a9616a00943ada6c20a0f158e3adb39df2ccac",
+  "groups": {
+    "vit_dense": {
+      "parameters": 414803696,
+      "trainable": 0,
+      "dtypes": [
+        "bfloat16"
+      ]
+    },
+    "vit_lora": {
+      "parameters": 4347648,
+      "trainable": 4347648,
+      "dtypes": [
+        "float32"
+      ]
+    },
+    "other_dense": {
+      "parameters": 2938630176,
+      "trainable": 2938630176,
+      "dtypes": [
+        "float32"
+      ]
+    }
+  },
+  "datasets": {
+    "train": {
+      "windows": 25239,
+      "fps": 15,
+      "raw_action_shape": [
+        15,
+        14
+      ],
+      "transformed_action_shape": [
+        15,
+        32
+      ],
+      "prompt": "Move to the table and pick up the green block inside the cardboard box."
+    },
+    "val": {
+      "windows": 2426,
+      "fps": 15,
+      "raw_action_shape": [
+        15,
+        14
+      ],
+      "transformed_action_shape": [
+        15,
+        32
+      ],
+      "prompt": "Move to the table and pick up the green block inside the cardboard box."
+    }
+  },
+  "learning_rates": {
+    "0": 1.9959770725108683e-08,
+    "499": 9.980039976653643e-06,
+    "500": 9.999999747378752e-06,
+    "19999": 9.999999974752427e-07,
+    "20000": 9.999999974752427e-07
+  },
+  "batch_size": 32,
+  "warmup_steps": 500,
+  "decay_steps": 20000,
+  "ema_decay": 0.99,
+  "vit_rank": 8,
+  "vit_alpha": 16,
+  "base_dense_shapes_exact": true,
+  "train_state_bytes": 48746859980,
+  "gpu_used": false,
+  "base_arrays_loaded": false,
+  "gpu_memory_verified": false,
+  "cpu_tests": {
+    "vit_lora": true,
+    "official_contract": true,
+    "official_trainstate_compilation": true,
+    "finite_runtime_reporting": true,
+    "one_shot_queue": true
+  },
+  "official_trainstate_lower_compile_checked": true,
+  "actual_batch_matches_model_spec": true,
+  "actual_batch_leaves": [
+    {
+      "shape": [
+        32,
+        224,
+        224,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32,
+        224,
+        224,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32,
+        224,
+        224,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "float32"
+    },
+    {
+      "shape": [
+        32,
+        200
+      ],
+      "dtype": "int32"
+    },
+    {
+      "shape": [
+        32,
+        200
+      ],
+      "dtype": "bool"
+    },
+    {
+      "shape": [
+        32,
+        15,
+        32
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "ema_frozen_dense_policy": "copy_raw_frozen_parameters_exactly"
+}

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "joint-time-sync"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[project.scripts]
+jointctl = "jointctl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+jointctl = ["console_web/*.html", "console_web/*.css", "console_web/*.js"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

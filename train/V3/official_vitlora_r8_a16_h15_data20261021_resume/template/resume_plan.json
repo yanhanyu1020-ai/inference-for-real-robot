@@ -1,0 +1,10 @@
+{
+  "run_name": "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_data20261021",
+  "original_code": "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_data20261021",
+  "original_manifest_sha256": "d2d3be0864e239f6c0b060e95e1ac5dfdb0bf9dfcdae65ba43e79a37a47821c4",
+  "source_loop_step": 16000,
+  "source_actual_step": 16001,
+  "target_updates": 20000,
+  "restore_policy": "Official full restore raw params, Adam, EMA and step; no initial weight reload or optimizer reset",
+  "data_order_policy": "Official resume restarts seed42 shuffle; sampler was not checkpointed"
+}

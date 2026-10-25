@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-21T15:41:52.131207+00:00",
+  "test_sha256": "622eb32106883a106e6f26b9ce45e671af74ccbc4d9e041e44b301956112e64c",
+  "global_cache_disabled_before_jax_import": true,
+  "populated_cache_bypassed_without_reader_calls": true,
+  "global_cache_flag_remained_false": true,
+  "gpu_used": false,
+  "warm_cache_cpu_process": {
+    "passed": true,
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "backend": "cpu",
+    "cache_enabled": true,
+    "persistent_cache_reads": 24,
+    "memory": {
+      "argument_size_in_bytes": 180,
+      "output_size_in_bytes": 328,
+      "alias_size_in_bytes": 148,
+      "temp_size_in_bytes": 452
+    },
+    "official_train_sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+    "state_class": "openpi.training.utils.TrainState",
+    "official_train_step_used": true,
+    "abstract_donation_lower_compile_passed": true,
+    "next_raw_adam_ema_and_metrics_bitwise_equal_to_official_direct_jit": true,
+    "optimizer_step_before_and_after": [
+      12001,
+      12002
+    ],
+    "adam_counts_before_and_after": [
+      [
+        12001,
+        12001
+      ],
+      [
+        12002,
+        12002
+      ]
+    ],
+    "frozen_raw_and_ema_exactly_unchanged": true,
+    "gpu_used": false,
+    "base_arrays_loaded": false,
+    "videos_decoded": false,
+    "cache_files": [
+      "jit__threefry_seed-b6969d5f6c901c85bae980bd0e3a9e72271c80c875eee325c51a5133bac5b0e3-cache",
+      "jit__threefry_split-4148813489f81c88223df7857458134e88c3affea09b6df37308ee67b2dcff96-cache",
+      "jit__unnamed_wrapped_function_-76bbc24e134448f4cdd4ff8e76e94cb942b313091b14db1a871b7cef499936cb-cache",
+      "jit__unstack-faadec27c39b74c04c0f590788305d6e59ecf5901cfd29bd2f694a40f6c03d18-cache",
+      "jit_broadcast_in_dim-ba585856cd851293dbc8d973ead9e6affcab43834c0b7a80d7533bdc3050d13f-cache",
+      "jit_broadcast_in_dim-d189fbb019cbcadc6b5b10258667a7e4df5c123fead969cfde41b512059de493-cache",
+      "jit_broadcast_in_dim-dcc560df21a5c7286a7552198b2a99c1471968ab3f08872a59a933869b8800f3-cache",
+      "jit_convert_element_type-24ed497fde82e880ea44713358091a93537b8d4dc6143f725124c2aed1457218-cache",
+      "jit_convert_element_type-346c6da71395a298ed1df9a5ebb67c1d3ea3a152f811bb63e0e5c62e10898dd2-cache",
+      "jit_convert_element_type-9ca802c12ffe74b5c730f22b84ebf4ddd62b658222da060b096e191a482f7106-cache",
+      "jit_convert_element_type-a5383bb89a7ebf79dbb239f082a9f898d1c0305f987b79a7c3d91e4d6ec47683-cache",
+      "jit_convert_element_type-bc13a59ea3223ca84fd75e6ed48394cecf33e6fa4068613c7dbed63c124159cf-cache",
+      "jit_convert_element_type-e30a06dfa3313067776544a564b164e3eb4a9cc932a9806284943bd2382ca453-cache",
+      "jit_copy-102f1ac60419493c86d453c0a5438e9bb51b3c0156108d7e68e3d17d6894b431-cache",
+      "jit_copy-530db98d0d2d83fc246648c73617e28bf3318bfa769517c8122531ffce21f90b-cache",
+      "jit_copy-68158a498fee390e324ec497a9e133bf231195192256c0be2a1e8500ebe10605-cache",
+      "jit_copy-6e78059b2fae9b2aec69bc3bbdc522074625b284685e38ffe7d12e9ae2ae2db5-cache",
+      "jit_copy-76427559afe18820ed4228a925adb499bf65de699718cbb250213051b83163d7-cache",
+      "jit_copy-affbabd76ef6238cef8b0562c28f3916a94278d9f1043ac6ab793c66d3f311c0-cache",
+      "jit_copy-c0a17317a6a666190ebb42c257971bdbbf7ec2e5f22eb9060509725d80bb2693-cache",
+      "jit_copy-c0df9882b402ac26d15d2166bdb64352218314def6ded5c73af270b95449b081-cache",
+      "jit_copy-f038f5a444a64a06cb3fde94566fe9435f692c6cf7065ce190ba4f405cc27cf6-cache"
+    ]
+  },
+  "global_disabled_cpu_process": {
+    "passed": true,
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "backend": "cpu",
+    "cache_enabled": false,
+    "persistent_cache_reads": 0,
+    "memory": {
+      "argument_size_in_bytes": 180,
+      "output_size_in_bytes": 328,
+      "alias_size_in_bytes": 148,
+      "temp_size_in_bytes": 452
+    },
+    "official_train_sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+    "state_class": "openpi.training.utils.TrainState",
+    "official_train_step_used": true,
+    "abstract_donation_lower_compile_passed": true,
+    "next_raw_adam_ema_and_metrics_bitwise_equal_to_official_direct_jit": true,
+    "optimizer_step_before_and_after": [
+      12001,
+      12002
+    ],
+    "adam_counts_before_and_after": [
+      [
+        12001,
+        12001
+      ],
+      [
+        12002,
+        12002
+      ]
+    ],
+    "frozen_raw_and_ema_exactly_unchanged": true,
+    "gpu_used": false,
+    "base_arrays_loaded": false,
+    "videos_decoded": false,
+    "cache_files": [
+      "jit__threefry_seed-b6969d5f6c901c85bae980bd0e3a9e72271c80c875eee325c51a5133bac5b0e3-cache",
+      "jit__threefry_split-4148813489f81c88223df7857458134e88c3affea09b6df37308ee67b2dcff96-cache",
+      "jit__unnamed_wrapped_function_-76bbc24e134448f4cdd4ff8e76e94cb942b313091b14db1a871b7cef499936cb-cache",
+      "jit__unstack-faadec27c39b74c04c0f590788305d6e59ecf5901cfd29bd2f694a40f6c03d18-cache",
+      "jit_broadcast_in_dim-ba585856cd851293dbc8d973ead9e6affcab43834c0b7a80d7533bdc3050d13f-cache",
+      "jit_broadcast_in_dim-d189fbb019cbcadc6b5b10258667a7e4df5c123fead969cfde41b512059de493-cache",
+      "jit_broadcast_in_dim-dcc560df21a5c7286a7552198b2a99c1471968ab3f08872a59a933869b8800f3-cache",
+      "jit_convert_element_type-24ed497fde82e880ea44713358091a93537b8d4dc6143f725124c2aed1457218-cache",
+      "jit_convert_element_type-346c6da71395a298ed1df9a5ebb67c1d3ea3a152f811bb63e0e5c62e10898dd2-cache",
+      "jit_convert_element_type-9ca802c12ffe74b5c730f22b84ebf4ddd62b658222da060b096e191a482f7106-cache",
+      "jit_convert_element_type-a5383bb89a7ebf79dbb239f082a9f898d1c0305f987b79a7c3d91e4d6ec47683-cache",
+      "jit_convert_element_type-bc13a59ea3223ca84fd75e6ed48394cecf33e6fa4068613c7dbed63c124159cf-cache",
+      "jit_convert_element_type-e30a06dfa3313067776544a564b164e3eb4a9cc932a9806284943bd2382ca453-cache",
+      "jit_copy-102f1ac60419493c86d453c0a5438e9bb51b3c0156108d7e68e3d17d6894b431-cache",
+      "jit_copy-530db98d0d2d83fc246648c73617e28bf3318bfa769517c8122531ffce21f90b-cache",
+      "jit_copy-68158a498fee390e324ec497a9e133bf231195192256c0be2a1e8500ebe10605-cache",
+      "jit_copy-6e78059b2fae9b2aec69bc3bbdc522074625b284685e38ffe7d12e9ae2ae2db5-cache",
+      "jit_copy-76427559afe18820ed4228a925adb499bf65de699718cbb250213051b83163d7-cache",
+      "jit_copy-affbabd76ef6238cef8b0562c28f3916a94278d9f1043ac6ab793c66d3f311c0-cache",
+      "jit_copy-c0a17317a6a666190ebb42c257971bdbbf7ec2e5f22eb9060509725d80bb2693-cache",
+      "jit_copy-c0df9882b402ac26d15d2166bdb64352218314def6ded5c73af270b95449b081-cache",
+      "jit_copy-f038f5a444a64a06cb3fde94566fe9435f692c6cf7065ce190ba4f405cc27cf6-cache"
+    ]
+  }
+}

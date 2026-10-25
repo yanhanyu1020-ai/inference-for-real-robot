@@ -1,0 +1,14 @@
+{
+  "parent": "successful cachefix resume entry",
+  "changes": [
+    "Set JAX_ENABLE_COMPILATION_CACHE=false before any JAX imports",
+    "Assert global config and observe zero persistent cache reads",
+    "Save HLO hash and cache evidence; do not mislabel missing alias stats as OOM"
+  ],
+  "training_math_changes": false,
+  "optimizer_changes": false,
+  "model_changes": false,
+  "batch_changes": false,
+  "ema_changes": false,
+  "sha256": "a6f7e743fd5d7cccef88a3f23d9c92a4e594c70eb9b08ad3eda10d5eb073c2e1"
+}

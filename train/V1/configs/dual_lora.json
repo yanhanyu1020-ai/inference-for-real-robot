@@ -1,0 +1,46 @@
+{
+  "name": "pi05_heterovla_dual_lora",
+  "project": "heterovla-pi05",
+  "variant": "dual_lora",
+  "seed": 42,
+  "batch_size": 8,
+  "num_train_steps": 2000,
+  "peak_lr": 2.5e-05,
+  "action_horizon": 10,
+  "physical_action_dim": 14,
+  "model_action_dim": 32,
+  "language_variant": "gemma_2b_lora",
+  "expert_variant": "gemma_300m_lora",
+  "weights": "/meta_eon_cfs/home/hph/heterovla-model/pretrained/pi05_base/params",
+  "data_root": "/meta_eon_cfs/home/hph/heterovla-data/aligned/V1",
+  "checkpoint_dir": "/meta_eon_cfs/home/hph/heterovla-model/V1/runs/pi05_v1/checkpoints/pi05_heterovla_dual_lora/prepared",
+  "ema_decay": null,
+  "wandb_enabled": true,
+  "batch_size_status": "provisional_not_GPU_profiled",
+  "gradient_accumulation": "not_implemented_in_this_official_trainer",
+  "parameter_groups": {
+    "vision": {
+      "total": 414803696,
+      "trainable": 0,
+      "trainable_non_lora": 0
+    },
+    "language": {
+      "total": 2536400896,
+      "trainable": 27869184,
+      "trainable_non_lora": 0
+    },
+    "action_expert": {
+      "total": 450051072,
+      "trainable": 22118400,
+      "trainable_non_lora": 0
+    },
+    "projections_and_time_mlp": {
+      "total": 2165792,
+      "trainable": 2165792,
+      "trainable_non_lora": 2165792
+    }
+  },
+  "pretrained_parameter_shapes_checked": 51,
+  "total_parameters": 3403421456,
+  "trainable_parameters": 52153376
+}

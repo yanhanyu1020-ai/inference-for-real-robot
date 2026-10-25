@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "manifest_sha256": "6eb27dff7821eeaad418f7b9468599ade48095721c7f8f6976931426ce5dbea2",
+  "gpu_used": false,
+  "gpu_memory_verified": false,
+  "cpu_evidence_policy": "Reuse hash-bound official tiny save/restore/next-update roundtrip and global-cache regression; same official trainer and configuration except new dataset/run",
+  "source_preflight_sha256": "806f19d0396ea5445bfd3f58e5576e54e7f09473b6f73530d2fa4f6680583447",
+  "cpu_resume_contract_sha256": "71a81e9d98b746fb3c7d1a7bd95f963d86a10d35283bc359bfcc00f625ef8175"
+}

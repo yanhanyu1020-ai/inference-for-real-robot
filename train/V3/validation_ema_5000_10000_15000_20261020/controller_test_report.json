@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "tests": 6,
+  "gpu_used": false,
+  "test_file": "test_queue_contract.py",
+  "source_sha256": {
+    "test_queue_contract.py": "b17e823cfc0fada122d5058ba4bdcf013312266d3653cdc44a56c073cafe8028",
+    "build_cache.py": "83aeea8eec2769113671676b53faff72744a3cfca3de65336cd413d3efb596a1",
+    "evaluate_checkpoint.py": "60df860248577d05bd7a711d9d0add9e4cf6846ad450c6dd7498e446defe38e2",
+    "queue_eval.py": "06d1b22f61562ca68c7a3c136aa9aa870c19664d4fa9efce96ca4e1715d899e4"
+  },
+  "scope": "syntax and CPU queue gates; current GPU forward not yet compiled or run"
+}

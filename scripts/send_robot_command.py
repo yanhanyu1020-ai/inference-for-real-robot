@@ -1,0 +1,1 @@
+../inference/scripts/send_robot_command.py

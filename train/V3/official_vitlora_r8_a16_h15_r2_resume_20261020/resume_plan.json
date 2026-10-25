@@ -1,0 +1,18 @@
+{
+  "run_name": "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2",
+  "resume_id": "reboot_20261020_from12001",
+  "source_loop_step": 12000,
+  "source_actual_step": 12001,
+  "source_checkpoint": "/meta_eon_cfs/home/hph/heterovla-model/V3/checkpoints/pi05_heterovla_v3_vitlora/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2/12000",
+  "original_manifest_sha256": "02abc63c0cb72eb8304fcb23a79d22d2069db703b7e95beec662775edcf26591",
+  "original_code": "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2",
+  "resume_code": "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2_resume_20261020",
+  "queue_dir": "/meta_eon_cfs/home/hph/heterovla-model/V3/queues/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2__resume_20261020",
+  "preferred_gpu": "GPU-0b2922ed-4340-e5b9-3cb4-3f0eb92380de",
+  "boot_id_at_inspection": "50544ed6-927c-4bba-b623-ee2c0403ec24",
+  "target_updates": 20000,
+  "authorization": "User requested checking the 16.7 reboot and resuming interrupted training on an available GPU.",
+  "restore_policy": "Official full restore of raw params, Adam counts and moments, EMA and step; no base reload, no optimizer reset.",
+  "data_order_policy": "Official resume rebuilds seed42 shuffle; sampler was not checkpointed.",
+  "scheduled_monitoring": "remains paused"
+}

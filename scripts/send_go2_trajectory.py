@@ -1,0 +1,1 @@
+../inference/scripts/send_go2_trajectory.py

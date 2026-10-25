@@ -1,0 +1,7 @@
+{
+  "status": "prepared_only",
+  "gpu_workers_started": false,
+  "resource_waiter_started": false,
+  "user_latest_instruction": "显存不够了，写好脚本即可",
+  "cpu_cache_stop_requested": true
+}

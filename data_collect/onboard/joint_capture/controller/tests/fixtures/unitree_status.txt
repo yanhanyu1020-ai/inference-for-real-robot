@@ -1,0 +1,2 @@
+episode=/data/episodes/joint_03
+{"running": true, "frames_saved": 128}

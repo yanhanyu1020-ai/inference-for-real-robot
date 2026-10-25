@@ -1,0 +1,13 @@
+{
+  "kind": "unitree",
+  "port": 8701,
+  "interface": "eth0",
+  "go2_normal_state_codes": [0, 100],
+  "can": "can0",
+  "cameras": {
+    "front": "254843065497",
+    "wrist": "254843064363"
+  },
+  "velocity_scale": 0.3,
+  "max_action_age_s": 0.75
+}

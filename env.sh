@@ -1,0 +1,33 @@
+# Source from any directory. This configures the local V3 environment only.
+export HETEROVLA_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+export OPENPI_ROOT="$HETEROVLA_ROOT/third_party/openpi"
+export HETEROVLA_MODEL_ROOT="${HETEROVLA_MODEL_ROOT:-$HETEROVLA_ROOT/../heterovla-model}"
+export HETEROVLA_DATA_ROOT="${HETEROVLA_DATA_ROOT:-$HETEROVLA_ROOT/../heterovla-data/aligned/V3}"
+export PI05_PARAMS="${PI05_PARAMS:-$HETEROVLA_MODEL_ROOT/pretrained/pi05_base/params}"
+export OPENPI_DATA_HOME="${OPENPI_DATA_HOME:-$HETEROVLA_ROOT/.cache/openpi}"
+export XDG_CACHE_HOME="$HETEROVLA_ROOT/.cache"
+export HF_HOME="${HETEROVLA_HF_HOME:-$HETEROVLA_ROOT/.cache/huggingface}"
+export HF_DATASETS_CACHE="$HF_HOME/datasets"
+export HF_HUB_CACHE="$HF_HOME/hub"
+export HUGGINGFACE_HUB_CACHE="$HF_HUB_CACHE"
+export HF_ASSETS_CACHE="$HF_HOME/assets"
+unset TRANSFORMERS_CACHE
+export HF_LEROBOT_HOME="$HETEROVLA_DATA_ROOT/lerobot"
+export HF_HUB_OFFLINE="${HF_HUB_OFFLINE:-1}"
+export HF_DATASETS_OFFLINE="${HF_DATASETS_OFFLINE:-1}"
+export WANDB_MODE="${WANDB_MODE:-offline}"
+export WANDB_DIR="${WANDB_DIR:-$HETEROVLA_MODEL_ROOT/V3/wandb}"
+export WANDB_PROJECT="${WANDB_PROJECT:-heterovla-pi05}"
+export WANDB_CACHE_DIR="$HETEROVLA_ROOT/.cache/wandb"
+export WANDB_CONFIG_DIR="$HETEROVLA_ROOT/.cache/wandb-config"
+export WANDB_DATA_DIR="$HETEROVLA_ROOT/.cache/wandb-data"
+export PYTHONDONTWRITEBYTECODE=1
+export TOKENIZERS_PARALLELISM=false
+export MPLBACKEND=Agg
+export MPLCONFIGDIR="$HETEROVLA_ROOT/.cache/matplotlib"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-4}"
+export OPENBLAS_NUM_THREADS="$OMP_NUM_THREADS"
+export MKL_NUM_THREADS="$OMP_NUM_THREADS"
+export PYTHONPATH="$HETEROVLA_ROOT/inference:$OPENPI_ROOT/src:$OPENPI_ROOT/packages/openpi-client/src${PYTHONPATH:+:$PYTHONPATH}"
+export PATH="$HETEROVLA_ROOT/.venvs/bin:$PATH"
+source "$HETEROVLA_ROOT/.venvs/openpi-pi05/bin/activate"

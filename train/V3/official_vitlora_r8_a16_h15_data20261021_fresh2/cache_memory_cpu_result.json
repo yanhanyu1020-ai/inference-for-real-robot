@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "gpu_used": false,
+  "rows": [
+    {
+      "jax": "0.5.3",
+      "jaxlib": "0.5.3",
+      "backend": "cpu",
+      "cache_enabled": true,
+      "cache_hits": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "memory": {
+        "argument_size_in_bytes": 3145736,
+        "output_size_in_bytes": 3145764,
+        "alias_size_in_bytes": 3145728,
+        "temp_size_in_bytes": 1081344
+      },
+      "hlo_header": "HloModule jit_donor, is_scheduled=true, input_output_alias={ {0}: (1, {}, may-alias), {1}: (2, {}, may-alias), {2}: (3, {}, may-alias) }, entry_computation_layout={(u32[2]{0}, f32[262144]{0}, f32[262144]{0}, f32[262144]{0})->(f32[262144]{0}, f32[262144]{0}, f32[262144]{0}, f32[])}, allow_spmd_sharding_propagation_to_parameters={true,true,true,true}, allow_spmd_sharding_propagation_to_output={true,true,true,true}",
+      "hlo_sha256": "e6ddbf60780ad8861d06b2665b64a42ed96f755d3de6e8f54aa8eb98fb251be2",
+      "execution_reused_all_donated_buffer_pointers": true,
+      "cache_files": [
+        "jit_broadcast_in_dim-8ab91f78083746cf3531699781faccfaf1cc4ce2f332b17f029b48e0d36eae92-cache",
+        "jit_convert_element_type-527095aae8015130ec0343842d46c4d91a2ac33dd503edc9bcb378b8d1317e99-cache",
+        "jit_convert_element_type-ad44310565cc3ca02ca200e6a4f6858013f7bc6d074f2e26a057b8cf7359b256-cache",
+        "jit_donor-0bfad3681955633def8ff6b02a810952d778e488253130684272f2df50c90f13-cache"
+      ],
+      "phase": "cold"
+    },
+    {
+      "jax": "0.5.3",
+      "jaxlib": "0.5.3",
+      "backend": "cpu",
+      "cache_enabled": true,
+      "cache_hits": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "memory": {
+        "argument_size_in_bytes": 3145736,
+        "output_size_in_bytes": 3145764,
+        "alias_size_in_bytes": 0,
+        "temp_size_in_bytes": 1081344
+      },
+      "hlo_header": "HloModule jit_donor, is_scheduled=true, input_output_alias={ {0}: (1, {}, may-alias), {1}: (2, {}, may-alias), {2}: (3, {}, may-alias) }, entry_computation_layout={(u32[2]{0}, f32[262144]{0}, f32[262144]{0}, f32[262144]{0})->(f32[262144]{0}, f32[262144]{0}, f32[262144]{0}, f32[])}, allow_spmd_sharding_propagation_to_parameters={true,true,true,true}, allow_spmd_sharding_propagation_to_output={true,true,true,true}",
+      "hlo_sha256": "e6ddbf60780ad8861d06b2665b64a42ed96f755d3de6e8f54aa8eb98fb251be2",
+      "execution_reused_all_donated_buffer_pointers": true,
+      "cache_files": [
+        "jit_broadcast_in_dim-8ab91f78083746cf3531699781faccfaf1cc4ce2f332b17f029b48e0d36eae92-cache",
+        "jit_convert_element_type-527095aae8015130ec0343842d46c4d91a2ac33dd503edc9bcb378b8d1317e99-cache",
+        "jit_convert_element_type-ad44310565cc3ca02ca200e6a4f6858013f7bc6d074f2e26a057b8cf7359b256-cache",
+        "jit_donor-0bfad3681955633def8ff6b02a810952d778e488253130684272f2df50c90f13-cache"
+      ],
+      "phase": "warm"
+    },
+    {
+      "jax": "0.5.3",
+      "jaxlib": "0.5.3",
+      "backend": "cpu",
+      "cache_enabled": false,
+      "cache_hits": [],
+      "memory": {
+        "argument_size_in_bytes": 3145736,
+        "output_size_in_bytes": 3145764,
+        "alias_size_in_bytes": 3145728,
+        "temp_size_in_bytes": 1081344
+      },
+      "hlo_header": "HloModule jit_donor, is_scheduled=true, input_output_alias={ {0}: (1, {}, may-alias), {1}: (2, {}, may-alias), {2}: (3, {}, may-alias) }, entry_computation_layout={(u32[2]{0}, f32[262144]{0}, f32[262144]{0}, f32[262144]{0})->(f32[262144]{0}, f32[262144]{0}, f32[262144]{0}, f32[])}, allow_spmd_sharding_propagation_to_parameters={true,true,true,true}, allow_spmd_sharding_propagation_to_output={true,true,true,true}",
+      "hlo_sha256": "e6ddbf60780ad8861d06b2665b64a42ed96f755d3de6e8f54aa8eb98fb251be2",
+      "execution_reused_all_donated_buffer_pointers": true,
+      "cache_files": [
+        "jit_broadcast_in_dim-8ab91f78083746cf3531699781faccfaf1cc4ce2f332b17f029b48e0d36eae92-cache",
+        "jit_convert_element_type-527095aae8015130ec0343842d46c4d91a2ac33dd503edc9bcb378b8d1317e99-cache",
+        "jit_convert_element_type-ad44310565cc3ca02ca200e6a4f6858013f7bc6d074f2e26a057b8cf7359b256-cache",
+        "jit_donor-0bfad3681955633def8ff6b02a810952d778e488253130684272f2df50c90f13-cache"
+      ],
+      "phase": "disabled"
+    }
+  ],
+  "alias_stats_lost_on_cache_hit": true,
+  "disabled_cache_restores_alias_stats": true
+}

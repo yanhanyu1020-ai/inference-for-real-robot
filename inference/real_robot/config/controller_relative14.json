@@ -1,0 +1,7 @@
+{
+  "unitree": "http://127.0.0.1:18701",
+  "p450": "http://127.0.0.1:18702",
+  "policy": "ws://127.0.0.1:8001",
+  "execute_steps": 3,
+  "prompt": "Move to the table and pick up the green block inside the cardboard box."
+}

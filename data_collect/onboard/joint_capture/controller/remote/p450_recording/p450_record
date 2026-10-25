@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+source /opt/ros/noetic/setup.bash
+if [[ -f /home/amov/p450_experiment/devel/setup.bash ]]; then
+  source /home/amov/p450_experiment/devel/setup.bash
+fi
+
+export PYTHONPATH="/home/amov/p450_recording${PYTHONPATH:+:${PYTHONPATH}}"
+exec python3 -m p450_recording.cli "$@"

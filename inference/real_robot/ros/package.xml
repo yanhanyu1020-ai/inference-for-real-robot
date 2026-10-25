@@ -1,0 +1,10 @@
+<package format="2">
+  <name>heterovla_live</name>
+  <version>0.1.0</version>
+  <description>Observation-only startup using the installed P450 estimator.</description>
+  <maintainer email="local@localhost">HeteroVLA operators</maintainer>
+  <license>Proprietary</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>prometheus_uav_control</depend>
+</package>

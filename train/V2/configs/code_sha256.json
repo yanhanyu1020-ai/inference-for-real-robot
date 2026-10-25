@@ -1,0 +1,10 @@
+{
+  "README.md": "68e2ae66bb5b1564153bc375f74a2857e626b74a345631398fc09290ded4f843",
+  "configs/previous_best.json": "29e03f98f7a6c6b42fa14c085b08d4022dca9da14702f67cd48d9e5e8151288c",
+  "env.sh": "d692e849f379d483a950b94c44d54c1f864b39240f4de6afe5300e1caf44c2e2",
+  "launch_full.sh": "194c3a9143da82fa4db14a43b25e7128ea87ca8fe80b6df7067fd49ead402f3c",
+  "scripts/dataset_v2.py": "2adc6c25c616d2271e08ec0821ef3e8e390a5a8b9971fbf0dfc7477065d07984",
+  "scripts/launch_full.py": "c04e42fc7480290e429032b2feb25d5fd0f9302a6bc25ef6aa169366be21207f",
+  "scripts/train_full_v2.py": "a372ee0ca95dc3d49ac3c30e67bc8dc8ac71d5e5565707a2eeb04239efdfb883",
+  "scripts/v2_config.py": "a3a87ef40ea522aa94452e990b0ac933c79c01212b3744073af1f6df05c6a5bc"
+}

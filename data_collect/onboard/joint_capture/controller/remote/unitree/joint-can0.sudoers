@@ -1,0 +1,2 @@
+# Only start this fixed, root-owned service; no general sudo privileges.
+unitree ALL=(root) NOPASSWD: /bin/systemctl start joint-can0.service

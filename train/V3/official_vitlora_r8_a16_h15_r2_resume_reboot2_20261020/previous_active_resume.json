@@ -1,0 +1,13 @@
+{
+  "run_name": "vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2",
+  "resume_id": "reboot_20261020_cachefix_from12001",
+  "queue_dir": "/meta_eon_cfs/home/hph/heterovla-model/V3/queues/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2__resume_20261020_cachefix",
+  "code_dir": "/meta_eon_cfs/home/hph/heterovla/train/V3/official_vitlora_r8_a16_h15_r2_resume_20261020_cachefix",
+  "source_checkpoint": "/meta_eon_cfs/home/hph/heterovla-model/V3/checkpoints/pi05_heterovla_v3_vitlora/vitlora_r8_a16_dense_b32_lr1e-5_ema099_h15_s42_20261019_r2/12000",
+  "source_actual_step": 12001,
+  "started_unix": 1792471442.2853503,
+  "started_utc": "2026-10-20T04:44:03.918700+00:00",
+  "gpu": "GPU-3f45f18c-9af9-fb00-ce91-eaac6d6ec2c0",
+  "phase": "launched",
+  "boot_id": "50544ed6-927c-4bba-b623-ee2c0403ec24"
+}

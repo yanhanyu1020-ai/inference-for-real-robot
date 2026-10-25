@@ -1,0 +1,4 @@
+{
+  "capture": {"session_name": "joint_03"},
+  "recorder": {"active": true, "session_bytes": 4096, "session_dir": "/data/joint_03"}
+}

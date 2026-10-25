@@ -1,0 +1,1 @@
+../data_collect/scripts/record_teach.py

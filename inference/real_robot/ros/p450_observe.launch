@@ -1,0 +1,23 @@
+<launch>
+  <!-- No official UAV_controller, setup service, or policy command publisher. -->
+  <group ns="/uav1">
+    <node pkg="mavros" type="mavros_node" name="mavros" output="screen" required="true">
+      <param name="fcu_url" value="/dev/ttyTHS0:921600" />
+      <param name="gcs_url" value="" />
+      <param name="target_system_id" value="1" />
+      <param name="target_component_id" value="1" />
+      <rosparam command="load" file="$(find p450_experiment)/config/mavros_config/px4_pluginlists.yaml" />
+      <rosparam command="load" file="$(find p450_experiment)/config/mavros_config/px4_config_indoor.yaml" />
+    </node>
+  </group>
+  <node pkg="heterovla_live" type="run_estimator.sh" name="heterovla_p450_estimator" output="screen" required="true">
+    <param name="uav_id" value="1" />
+    <rosparam command="load" file="$(find p450_experiment)/config/prometheus_control_config/uav_control_mid360.yaml" />
+    <rosparam command="load" file="$(find p450_experiment)/config/prometheus_control_config/sensor_tf_offset_mid360.yaml" />
+    <param name="enable_px4_params_load" value="false" />
+  </node>
+  <include file="$(find p450_experiment)/launch_mid360/msg_MID360.launch" />
+  <include file="$(find p450_experiment)/launch_mid360/mapping_mid360.launch">
+    <arg name="rviz" value="false" />
+  </include>
+</launch>

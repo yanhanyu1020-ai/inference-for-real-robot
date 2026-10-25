@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-20T07:29:27.563450+00:00",
+  "test_sha256": "622eb32106883a106e6f26b9ce45e671af74ccbc4d9e041e44b301956112e64c",
+  "global_cache_disabled_before_jax_import": true,
+  "populated_cache_bypassed_without_reader_calls": true,
+  "global_cache_flag_remained_false": true,
+  "gpu_used": false,
+  "warm_cache_cpu_process": {
+    "passed": true,
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "backend": "cpu",
+    "cache_enabled": true,
+    "persistent_cache_reads": 24,
+    "memory": {
+      "argument_size_in_bytes": 180,
+      "output_size_in_bytes": 328,
+      "alias_size_in_bytes": 148,
+      "temp_size_in_bytes": 452
+    },
+    "official_train_sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+    "state_class": "openpi.training.utils.TrainState",
+    "official_train_step_used": true,
+    "abstract_donation_lower_compile_passed": true,
+    "next_raw_adam_ema_and_metrics_bitwise_equal_to_official_direct_jit": true,
+    "optimizer_step_before_and_after": [
+      12001,
+      12002
+    ],
+    "adam_counts_before_and_after": [
+      [
+        12001,
+        12001
+      ],
+      [
+        12002,
+        12002
+      ]
+    ],
+    "frozen_raw_and_ema_exactly_unchanged": true,
+    "gpu_used": false,
+    "base_arrays_loaded": false,
+    "videos_decoded": false,
+    "cache_files": [
+      "jit__threefry_seed-4ad610f7631b971b332f9e2cef457abde3a60c3bce0469b58d961c2c636b2f91-cache",
+      "jit__threefry_split-a02f15adf68bf5eac43ecff4a1657ed67efb7072115533c4600b1404322928d9-cache",
+      "jit__unnamed_wrapped_function_-ac88523474489af7ed8cd6e9042495277c36c051b514d0e274be8952f3d6362e-cache",
+      "jit__unstack-b9fcdaf56ab57f8c62f10cb2171220b41c349b6882090a6f341d8fe8678812c7-cache",
+      "jit_broadcast_in_dim-1577b6a6a0bce0d67684a53930d0263365902bcc449550f13b67193ce6746d86-cache",
+      "jit_broadcast_in_dim-55ab7894954f6eedd1c7a701cd33ea4651a2757e54086d3bddbd6eb09b3d78c0-cache",
+      "jit_broadcast_in_dim-bd7f1592cb161cc3655b04856f3dc279165c29990c4f8ac2540c43d5bc7a8113-cache",
+      "jit_convert_element_type-185a90eeaab2dec09fae4b69c0b8eefbb415c367c17933a902e4a97766cf0c90-cache",
+      "jit_convert_element_type-2a0a9d60320a2f2120f215c49d3f882150c5361a949280772b358324fad8cf38-cache",
+      "jit_convert_element_type-51c417a19c93372a76aeb9951f0725ee8e39875946e8d30317de3b8f090786eb-cache",
+      "jit_convert_element_type-a8618189a20d6ae68bafdf875b75a860804e96f3456db59fac205f30d1ee44e2-cache",
+      "jit_convert_element_type-d4aa968335b14a98031a02f9ee68bfea50fd2fbae7f65740c82b4d48f22d5edc-cache",
+      "jit_convert_element_type-e2a2dc138f5f7bbc54b9e8a425fae8c5c2e7f6c7902308f99adb62d40542e82a-cache",
+      "jit_copy-1537b5af5dc8e93a1128f3db72b331aec9294ed8a0beba9277ac96facb1fbc6b-cache",
+      "jit_copy-2928bb44a467a228f895d1f99c0b95fefc1fa8ec285f9427306f0131c41932ec-cache",
+      "jit_copy-497c748f9543c8b93648019e08bae50614880aa7b5d7e360a07407747070e81d-cache",
+      "jit_copy-4ee0ca43e9cce87fca5515495c2e91030f2ef10f35167634a57e3da84dbdfed4-cache",
+      "jit_copy-595101043e7e7fe384f10347c82b11a684168a4b04ea1e2955a8736e3ac50a15-cache",
+      "jit_copy-897005486e7bc807b1f39d266fedabc1705393e7468d06352bd4e712ddd55a73-cache",
+      "jit_copy-949faf2b3be1bfd9d0655859c1622be4b92dfb1d33b0661516d9ca51c28f3713-cache",
+      "jit_copy-b02904761b2baefcc04f25525224efac8e4594dda04640a59a3765bb41154c2d-cache",
+      "jit_copy-bc087e1b3493da0e650291073005c94cc4ca8dd8b658af43595c1120b986c8dd-cache"
+    ]
+  },
+  "global_disabled_cpu_process": {
+    "passed": true,
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "backend": "cpu",
+    "cache_enabled": false,
+    "persistent_cache_reads": 0,
+    "memory": {
+      "argument_size_in_bytes": 180,
+      "output_size_in_bytes": 328,
+      "alias_size_in_bytes": 148,
+      "temp_size_in_bytes": 452
+    },
+    "official_train_sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+    "state_class": "openpi.training.utils.TrainState",
+    "official_train_step_used": true,
+    "abstract_donation_lower_compile_passed": true,
+    "next_raw_adam_ema_and_metrics_bitwise_equal_to_official_direct_jit": true,
+    "optimizer_step_before_and_after": [
+      12001,
+      12002
+    ],
+    "adam_counts_before_and_after": [
+      [
+        12001,
+        12001
+      ],
+      [
+        12002,
+        12002
+      ]
+    ],
+    "frozen_raw_and_ema_exactly_unchanged": true,
+    "gpu_used": false,
+    "base_arrays_loaded": false,
+    "videos_decoded": false,
+    "cache_files": [
+      "jit__threefry_seed-4ad610f7631b971b332f9e2cef457abde3a60c3bce0469b58d961c2c636b2f91-cache",
+      "jit__threefry_split-a02f15adf68bf5eac43ecff4a1657ed67efb7072115533c4600b1404322928d9-cache",
+      "jit__unnamed_wrapped_function_-ac88523474489af7ed8cd6e9042495277c36c051b514d0e274be8952f3d6362e-cache",
+      "jit__unstack-b9fcdaf56ab57f8c62f10cb2171220b41c349b6882090a6f341d8fe8678812c7-cache",
+      "jit_broadcast_in_dim-1577b6a6a0bce0d67684a53930d0263365902bcc449550f13b67193ce6746d86-cache",
+      "jit_broadcast_in_dim-55ab7894954f6eedd1c7a701cd33ea4651a2757e54086d3bddbd6eb09b3d78c0-cache",
+      "jit_broadcast_in_dim-bd7f1592cb161cc3655b04856f3dc279165c29990c4f8ac2540c43d5bc7a8113-cache",
+      "jit_convert_element_type-185a90eeaab2dec09fae4b69c0b8eefbb415c367c17933a902e4a97766cf0c90-cache",
+      "jit_convert_element_type-2a0a9d60320a2f2120f215c49d3f882150c5361a949280772b358324fad8cf38-cache",
+      "jit_convert_element_type-51c417a19c93372a76aeb9951f0725ee8e39875946e8d30317de3b8f090786eb-cache",
+      "jit_convert_element_type-a8618189a20d6ae68bafdf875b75a860804e96f3456db59fac205f30d1ee44e2-cache",
+      "jit_convert_element_type-d4aa968335b14a98031a02f9ee68bfea50fd2fbae7f65740c82b4d48f22d5edc-cache",
+      "jit_convert_element_type-e2a2dc138f5f7bbc54b9e8a425fae8c5c2e7f6c7902308f99adb62d40542e82a-cache",
+      "jit_copy-1537b5af5dc8e93a1128f3db72b331aec9294ed8a0beba9277ac96facb1fbc6b-cache",
+      "jit_copy-2928bb44a467a228f895d1f99c0b95fefc1fa8ec285f9427306f0131c41932ec-cache",
+      "jit_copy-497c748f9543c8b93648019e08bae50614880aa7b5d7e360a07407747070e81d-cache",
+      "jit_copy-4ee0ca43e9cce87fca5515495c2e91030f2ef10f35167634a57e3da84dbdfed4-cache",
+      "jit_copy-595101043e7e7fe384f10347c82b11a684168a4b04ea1e2955a8736e3ac50a15-cache",
+      "jit_copy-897005486e7bc807b1f39d266fedabc1705393e7468d06352bd4e712ddd55a73-cache",
+      "jit_copy-949faf2b3be1bfd9d0655859c1622be4b92dfb1d33b0661516d9ca51c28f3713-cache",
+      "jit_copy-b02904761b2baefcc04f25525224efac8e4594dda04640a59a3765bb41154c2d-cache",
+      "jit_copy-bc087e1b3493da0e650291073005c94cc4ca8dd8b658af43595c1120b986c8dd-cache"
+    ]
+  }
+}

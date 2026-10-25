@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "manifest_sha256": "ecd4c39be970298a823ddd6f45755e5e0754c899d5587059db7984c319588b05",
+  "original_contract": {
+    "manifest_sha256": "02abc63c0cb72eb8304fcb23a79d22d2069db703b7e95beec662775edcf26591",
+    "preflight_sha256": "3a79a78425631f0852929c606a4499de691f3373581954c08a7e26ac1e3f1aff"
+  },
+  "source_loop_step": 12000,
+  "source_actual_step": 12001,
+  "checkpoint_scalars": {
+    "step": 12001,
+    "opt_state.1.0.count": 12001,
+    "opt_state.1.2.count": 12001
+  },
+  "cpu_resume_roundtrip_passed": true,
+  "gpu_used": false,
+  "large_checkpoint_arrays_loaded": false,
+  "data_order_policy": "official resume shuffle restart",
+  "target_updates": 20000,
+  "cache_statistics_cpu_regression_passed": true,
+  "cache_fix": "Disable persistent cache only during abstract memory lower/compile; finally restore. No train math or recovery changes.",
+  "validation_method": "Unmodified successful recovery code and12000 checkpoint; original CPU tests reused, all code and checkpoint metadata hashes rechecked for this reboot."
+}

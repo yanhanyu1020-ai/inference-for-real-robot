@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "manifest_sha256": "5b4f7b62f3526b008e978fdf716f9f60562c8ac4186b25fd641961ff8e073ff6",
+  "original_contract": {
+    "manifest_sha256": "02abc63c0cb72eb8304fcb23a79d22d2069db703b7e95beec662775edcf26591",
+    "preflight_sha256": "3a79a78425631f0852929c606a4499de691f3373581954c08a7e26ac1e3f1aff"
+  },
+  "source_loop_step": 12000,
+  "source_actual_step": 12001,
+  "checkpoint_scalars": {
+    "step": 12001,
+    "opt_state.1.0.count": 12001,
+    "opt_state.1.2.count": 12001
+  },
+  "cpu_resume_roundtrip_passed": true,
+  "gpu_used": false,
+  "large_checkpoint_arrays_loaded": false,
+  "data_order_policy": "official resume shuffle restart",
+  "target_updates": 20000
+}

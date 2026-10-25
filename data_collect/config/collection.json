@@ -1,0 +1,30 @@
+{
+  "data_root": "/home/unitree/heterovla-data/datasets",
+  "network_interface": "eth0",
+  "can_interface": "can0",
+  "fps": 30,
+  "width": 640,
+  "height": 480,
+  "png_compression": 1,
+  "save_workers": 4,
+  "save_queue_size": 32,
+  "max_camera_skew_ms": 50,
+  "camera_stale_ms": 500,
+  "go2_stale_ms": 500,
+  "piper_stale_ms": 250,
+  "piper_gamepad_stale_ms": 1000,
+  "piper_gamepad": {
+    "python": "/home/unitree/miniconda3/envs/cuRobo/bin/python",
+    "runtime": "/home/unitree/Gamepad_PiPER_runtime/Gamepad_PiPER",
+    "control_hz": 200
+  },
+  "cameras": {
+    "front": "254843065497",
+    "wrist": "254843064363"
+  },
+  "a800": {
+    "ssh_host": "heterovla-a800",
+    "ssh_config": "/home/unitree/heterovla-control/ssh_config",
+    "data_root": "/meta_eon_cfs/home/yhy/heterovla-data"
+  }
+}
